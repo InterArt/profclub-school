@@ -1,0 +1,15 @@
+#mongodb
+spring.data.mongodb:
+  host: localhost
+  port: 27018
+  database: profclub-school
+security:
+  user:
+    name: hovhannisyan.arthur@hotmail.com
+    password: 123456
+management.security.role: ADMIN
+#logging
+logging.level:
+  springframework: WARN
+  hibernate: WARN
+  net.sf.ehcache: DEBUG
