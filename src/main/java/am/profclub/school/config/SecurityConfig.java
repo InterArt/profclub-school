@@ -30,7 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.csrf().disable();
     }
 
-    // parse user detials
+    // parse user details
     private List<UserDetails> parseUserDetails() throws Exception {
         final List<String> credentials = Files.readAllLines(Paths.get(System.getProperty("media.credentials.source", "src/main/resources"), "application-users.properties"));
         final List<UserDetails> userDetailsList = new ArrayList<UserDetails>(credentials.size());

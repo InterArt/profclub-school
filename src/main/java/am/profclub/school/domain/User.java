@@ -4,11 +4,13 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "d_user")
+import java.util.List;
+
+@Document(collection = "d_users")
 public class User {
 
     @Id
-    private long id;
+    private String id;
     private String name;
     private String surname;
 
@@ -22,5 +24,6 @@ public class User {
 
     private Address address;
     private Account account;
+    private List<String> skills;
 
 }
