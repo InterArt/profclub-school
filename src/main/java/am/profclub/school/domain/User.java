@@ -1,13 +1,15 @@
 package am.profclub.school.domain;
 
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
+@Data
 @Document(collection = "d_users")
-public class User {
+public class User extends BaseEntity {
 
     @Id
     private String id;

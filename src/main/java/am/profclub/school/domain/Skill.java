@@ -1,13 +1,14 @@
 package am.profclub.school.domain;
 
+import lombok.Data;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
+@Data
 @Document(collection = "d_skills")
-public class Skill {
+public class Skill extends BaseEntity {
 
     @Id
     private String id;
