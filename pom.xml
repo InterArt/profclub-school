@@ -15,6 +15,7 @@
         <!-- Configure the main class of our Spring Boot application -->
         <start-class>am.profclub.school.Application</start-class>
         <jbehave.version>3.9.5</jbehave.version>
+        <model.mapper>0.7.5</model.mapper>
     </properties>
 
     <!-- Inherit defaults from Spring Boot -->
@@ -34,6 +35,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
         </dependency>
 
         <dependency>
@@ -98,6 +104,12 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-mongodb</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.modelmapper.extensions</groupId>
+            <artifactId>modelmapper-spring</artifactId>
+            <version>${model.mapper}</version>
         </dependency>
 
         <dependency>

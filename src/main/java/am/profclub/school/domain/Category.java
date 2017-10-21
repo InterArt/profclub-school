@@ -16,8 +16,6 @@ public class Category extends BaseEntity {
 
     public static final String PATH_SEPARATOR = "$$";
 
-    @Id
-    private String id;
     @Indexed(unique = true)
     @NotEmpty
     private String name;

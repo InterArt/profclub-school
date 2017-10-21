@@ -20,7 +20,8 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
+//@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
+@Order(SecurityProperties.DEFAULT_FILTER_ORDER)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override

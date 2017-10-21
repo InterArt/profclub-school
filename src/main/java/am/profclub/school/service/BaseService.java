@@ -4,13 +4,13 @@ import java.util.List;
 
 public interface BaseService<T, K> extends SequenceConstants {
 
-    K findOne(int id);
+    K findOne(String id);
 
     List<K> findAll();
 
     void update(K model);
 
-    void delete(int id);
+    void delete(String id);
 
-    int create(K model);
+    String create(K model);
 }

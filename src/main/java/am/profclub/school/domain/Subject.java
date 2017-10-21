@@ -8,8 +8,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "d_subject")
 public class Subject extends BaseEntity {
 
-    @Id
-    private String id;
     private String name;
     private String description;
 

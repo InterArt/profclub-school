@@ -11,10 +11,8 @@ import java.util.List;
 @Document(collection = "d_users")
 public class User extends BaseEntity {
 
-    @Id
-    private String id;
-    private String name;
-    private String surname;
+    private String firstName;
+    private String lastName;
 
     @Indexed(unique = true)
     private String username;
