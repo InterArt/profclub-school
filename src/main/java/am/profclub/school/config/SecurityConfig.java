@@ -34,7 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     // parse user details
     private List<UserDetails> parseUserDetails() throws Exception {
         final List<String> credentials = Files.readAllLines(Paths.get(System.getProperty("media.credentials.source", "src/main/resources"), "application-users.properties"));
-        final List<UserDetails> userDetailsList = new ArrayList<UserDetails>(credentials.size());
+        final List<UserDetails> userDetailsList = new ArrayList<>(credentials.size());
         for (String credential : credentials) {
             String[] credentialTokens = credential.split("\\s*,\\s*");
             userDetailsList.add(new User(credentialTokens[0], credentialTokens[1], Arrays.asList(new SimpleGrantedAuthority(credentialTokens[2]))));
